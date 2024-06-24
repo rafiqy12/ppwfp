@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bmi.css">
+
 </head>
+
 <body>
-    <form name="bmiForm">
-        <div class="bmi-calculator">
-            <h1>Calculate your BMI</h1>
-            <div class="bmi-calculator-weight">
-                <label for="myWeight">Weight (kg):</label>
-                <input type="range" id="myWeight" min="0" max="200" step="1">
-                <input type="number" id="weightInput" min="0" max="200" step="1">
-            </div>
-            <div class="bmi-calculator-height">
-                <label for="myHeight">Height (cm):</label>
-                <input type="range" id="myHeight" min="0" max="250" step="1">
-                <input type="number" id="heightInput" min="0" max="250" step="1">
-            </div>
-            <button onclick="calculateBMI()">Calculate</button>
-            <p id="bmiResult"></p> <!-- Display BMI result here -->
-        </div>
-    </form>
-    <script src="bmi.js"></script>
+    <div class="container">
+        <h2>BMI Calculator</h2>
+        <label for="tinggi">Tinggi (m):</label>
+        <input type="number" id="tinggi" step="0.01">
+        <label for="berat">Berat (kg):</label>
+        <input type="number" id="berat" step="0.01">
+        <a href="profile1.html">
+            <button class="kembali">Kembali ke Profile</button>
+        </a>
+        <button class="hitung" onclick="calculateBMI()">Hitung BMI</button>
+        <p id="result"></p>
+        
+    </div>
+
+    <script>
+        function calculateBMI() {
+            const tinggi = parseFloat(document.getElementById('tinggi').value);
+            const berat = parseFloat(document.getElementById('berat').value);
+
+            const hasil = berat / (tinggi * tinggi);
+
+            let status;
+            if (hasil < 18.5) {
+                status = 'Kurus';
+            } else if (hasil >= 18.5 && hasil < 25) {
+                status = 'Normal';
+            } else if (hasil >= 25 && hasil < 30) {
+                status = 'Kelebihan berat badan';
+            } else if (hasil >=30){
+                status = 'Obesitas';
+            } else {
+                status = 'Error'
+            }
+            document.getElementById('result').textContent = `Hasil BMI: ${hasil.toFixed(2)} (${status})`;
+        }
+    </script>
 </body>
+
 </html>

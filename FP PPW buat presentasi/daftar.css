@@ -1,0 +1,57 @@
+body {
+  background-image: url(image/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fffefe;
+}
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fffefe;
+}
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 650px;
+  text-align: center;
+  border: 1px solid rgb(241, 241, 241);
+  border-radius: 12px;
+  padding: 10px 20px;
+  background: transparent;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  background: transparent;
+  width: 330px;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  margin-right: 20px;
+  color: #fffefe;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.submit, .kembali {
+  background: #fffefe;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 45px;
+  width: 150px;
+  height: 15px;
+  color: rgb(4, 141, 253);
+}

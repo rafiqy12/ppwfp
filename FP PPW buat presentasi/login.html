@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-form">
+            <h2 class="">Login</h2>
+            <form id="login-form">
+                <div class="input-field">
+                    <input type="text" id="username" placeholder="Enter Username">
+                    <i class="bx bxs-user"></i>
+                    <label for="username"></label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="password" placeholder="Enter Password">
+                    <i class="bx bxs-user"></i>
+                    <label for="password"></label>
+                </div>
+                <button type="button" onclick="validateLogin()" class="login">Login</button>
+                
+            </form>
+            <a href="beranda.html">
+                <button class="kembali">Kembali ke Beranda</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function validateLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Replace with your validation logic
+            if (username.trim() === '') {
+                alert('Masukkan Username');
+            } else if (username !== 'rifan' && username !== 'rafiqy' && username !== 'ivan' && username !== 'luthfi') {
+                alert('Username tidak terdaftar');
+            } else if (password === '') {
+                alert('Masukkan password'); // You can redirect to another page here
+            } else if (username === 'rifan' && password === '2928') {
+                window.location.href = 'profile1.html'; // You can redirect to another page here
+            } else if (username === 'rafiqy' && password === '2926') {
+                window.location.href = 'profile2.html'; // You can redirect to another page here
+            } else if (username === 'ivan' && password === '2921') {
+                window.location.href = 'profile3.html'; // You can redirect to another page here
+            } else if (username === 'luthfi' && password === '2954') {
+                window.location.href = 'profile4.html'; // You can redirect to another page here
+            } else {
+                alert('Password salah');
+            }
+        }
+    </script>
+</body>
+
+</html>

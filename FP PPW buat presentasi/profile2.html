@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pribadi</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #fffefe;
+        }
+
+        header {
+            background-color: #0074d9;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="artikel2.html" style="color:#FFFFFF">Artikel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="bmi2.html" style="color:#FFFFFF ">BMI</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-danger" onclick="location.href = 'beranda.html';">Logout</button>
+                </li>
+            </ul>
+        </div>
+        <h1>PROFILE PASIEN</h1>
+    </header>
+    <main>
+        <div class="card mb-3" style="max-width: 800px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="image/pasfoto.jpg" width="200" height="auto" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Rafiqy</h5><br>
+                        <li class="card-text">Golongan darah : A</li><br>
+                        <li class="card-text">Tanggal lahir : 29 Februari 2004</li><br>
+                        <li class="card-text">Nomor Pasien : 23.12.2928</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="Alergi">
+            <h2>Alergi</h2>
+            <ul>
+                <li>Alergi Debu</li>
+                <li>Alergi Seafood</li>
+                <li>Alergi Kulit</li>
+                <li>Alergi Kacang</li>
+            </ul>
+        </section>
+        <section id="Riwayat">
+            <h2>Riwayat penyakit</h2>
+            <ul>
+                <li>Buta Warna</li>
+                <li>Asma</li>
+                <li>Diabetes Tipe 1</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Kontak</h2>
+            <p>Email: rifanmabel@students.amikom.ac.id</p>
+            <p>Telepon: 081213800436</p>
+            <p>Alamat: Ciomas, Bogor</p>
+        </section>
+    </main>
+    
+</body>
+
+</html>
